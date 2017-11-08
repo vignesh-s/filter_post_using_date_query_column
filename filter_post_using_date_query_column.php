@@ -1,6 +1,7 @@
 <?php
 /**
  * Plugin Name: WP REST API - Filter posts date wise using given column
+ * Plugin URI:  https://github.com/vignesh-s/filter_post_using_date_query_column
  * Description: In WordPress 4.7, Posts cannot be filtered based on modified, modified_gmt, date_gmt fields. Using this plugin we can specify the column(any of date, date_gmt, modified, modified_gmt) as query parameter "date_query_column" to query against value(s) given in "before" and/or "after" query parameters.
  * Author:      Vignesh Sundar
  * Author URI: 	https://github.com/vignesh-s/
@@ -31,7 +32,7 @@ function rest_api_add_post_date_query_column_param( $query_params ) {
 	$query_params['date_query_column'] = [
             'description' => __( 'The date query column.' ),
             'type'        => 'string',
-            'enum'        => [ 'post_date', 'post_date_gmt', 'post_modified', 'post_modified_gmt'],
+            'enum'        => ['post_date', 'post_date_gmt', 'post_modified', 'post_modified_gmt'],
         ];
     return $query_params;
 }
