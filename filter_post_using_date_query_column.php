@@ -32,7 +32,7 @@ function rest_api_add_post_date_query_column_param( $query_params ) {
 	$query_params['date_query_column'] = [
             'description' => __( 'The date query column.' ),
             'type'        => 'string',
-            'enum'        => ['post_date', 'post_date_gmt', 'post_modified', 'post_modified_gmt'],
+            'enum'        => ['date', 'date_gmt', 'modified', 'modified_gmt'],
         ];
     return $query_params;
 }
